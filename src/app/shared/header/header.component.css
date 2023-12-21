@@ -2,3 +2,7 @@
   font-size: 20px;
   font-weight: 400;
 }
+
+header {
+  border-bottom: rgb(128, 128, 128) solid medium;
+}
