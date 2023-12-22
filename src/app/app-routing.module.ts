@@ -11,8 +11,8 @@ import { LoginComponent } from './pages/admin/login/login.component';
 /* ROUTES */
 const routes: Routes = [
   /* PUBLIC */
-  { path: 'startseite', component: StartseiteComponent },
-  { path: '', redirectTo: '/startseite', pathMatch: 'full' }, // redirect '/' route to '/startseite'
+  { path: 'aktuelles', component: StartseiteComponent },
+  { path: '', redirectTo: '/aktuelles', pathMatch: 'full' }, // redirect '/' route to '/aktuelles'
 
   /* ADMIN - PUBLIC */
   { path: 'login', component: LoginComponent },
