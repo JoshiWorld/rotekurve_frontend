@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
+import { PagesModule } from './pages/pages.module';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
-import { AppRoutingModule } from './app-routing.module';
-import { StartseiteComponent } from './pages/startseite/startseite.component';
 import { NotFoundComponent } from './shared/not-found/not-found.component';
 import { FooterComponent } from './shared/footer/footer.component';
 
@@ -12,13 +12,13 @@ import { FooterComponent } from './shared/footer/footer.component';
   declarations: [
     AppComponent,
     HeaderComponent,
-    StartseiteComponent,
     NotFoundComponent,
     FooterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    PagesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
