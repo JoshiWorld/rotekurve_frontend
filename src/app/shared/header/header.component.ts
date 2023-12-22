@@ -8,13 +8,11 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent {
   header: Map<string, string> = new Map([
-    ['startseite', 'Startseite'],
-    ['eintrittskarte', 'Lang lebe die Eintrittskarte!'],
-    ['swg-fotos', 'SWG-Fotos'],
+    ['aktuelles', 'Aktuelles'],
     ['ueberuns', 'Über uns'],
-    ['mitgliedschaft', 'Mitgliedschaft'],
-    ['kontakt', 'Kontakt'],
+    ['spielplan', 'Spielplan'],
     ['links', 'Links'],
+    ['kontakt', 'Kontakt'],
   ]);
 
   constructor(private router: Router) { }
