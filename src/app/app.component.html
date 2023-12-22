@@ -1,7 +1,12 @@
 <app-header />
-<div class="md:container md:mx-auto">
-  <div class="flex flex-col my-auto items-center bgimg bg-cover">
-    <img src="assets/images/logo.png" alt="Hannover Logo">
+<div class="bg-gray-200">
+  <div class="md:container md:mx-auto">
+    <div class="flex flex-col my-auto items-center bgimg bg-cover">
+      <img src="assets/images/logo.png" alt="Hannover Logo">
+    </div>
+    <div>
+      <router-outlet />
+    </div>
   </div>
-  <router-outlet />
 </div>
+<app-footer />
