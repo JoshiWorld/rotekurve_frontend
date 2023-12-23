@@ -21,7 +21,13 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build and deploy
+      - name: Build
+        run: npm run build -- --configuration=production
+
+      - name: Deploy
         run: |
-          npm run build -- --configuration=production
-          scp -r -i ${{ secrets.SSH_PRIVATE_KEY }} dist/* ${{ secrets.DEV_USER }}@${{ secrets.DEPLOY_SERVER }}:${{ secrets.PATH_TO_DEV_DIRECTORY }}
+          # Install sshpass
+          sudo apt-get install -y sshpass
+
+          # Deploy using username and password
+          sshpass -p "${{ secrets.SSH_PASSWORD }}" scp -r dist/* ${{ secrets.DEV_USER }}@${{ secrets.DEPLOY_SERVER }}:${{ secrets.PATH_TO_DEV_DIRECTORY }}
