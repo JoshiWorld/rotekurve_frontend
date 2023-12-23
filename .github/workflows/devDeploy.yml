@@ -23,5 +23,5 @@ jobs:
 
       - name: Build and deploy
         run: |
-          npm run build -- --prod
+          npm run build -- --configuration=production
           scp -r -i ${{ secrets.SSH_PRIVATE_KEY }} dist/* user@${{ secrets.DEPLOY_SERVER }}:${{ secrets.PATH_TO_DEV_DIRECTORY }}
