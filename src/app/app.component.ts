@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { initFlowbite } from 'flowbite';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,13 @@ import { initFlowbite } from 'flowbite';
 export class AppComponent implements OnInit {
   title = 'rotekurve_frontend';
 
+  constructor(private router: Router) { }
+
   ngOnInit(): void {
     initFlowbite();
+  }
+
+  isAdminRoute(): boolean {
+    return this.router.url.startsWith('/admin');
   }
 }
