@@ -29,5 +29,5 @@ jobs:
           # Install sshpass
           sudo apt-get install -y sshpass
 
-          # Deploy using username and password
-          sshpass -p "${{ secrets.SSH_PASSWORD }}" scp -r dist/* ${{ secrets.DEV_USER }}@${{ secrets.DEPLOY_SERVER }}:${{ secrets.PATH_TO_DEV_DIRECTORY }}
+          # Deploy using username and password with StrictHostKeyChecking disabled
+          sshpass -p "${{ secrets.SSH_PASSWORD }}" scp -o StrictHostKeyChecking=no -r dist/* ${{ secrets.DEV_USER }}@${{ secrets.DEPLOY_SERVER }}:${{ secrets.PATH_TO_DEV_DIRECTORY }}
