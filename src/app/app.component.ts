@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { initFlowbite } from 'flowbite';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +10,13 @@ import { Router } from '@angular/router';
 export class AppComponent implements OnInit {
   title = 'rotekurve_frontend';
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {
+    this.router.events.subscribe((event) => {
+      if(event instanceof NavigationEnd) {
+        initFlowbite();
+      }
+    })
+  }
 
   ngOnInit(): void {
     initFlowbite();
