@@ -1,0 +1,7 @@
+* {
+  font-family: Arial, serif;
+}
+
+.flowbite-datepicker {
+  z-index: 1001;
+}
