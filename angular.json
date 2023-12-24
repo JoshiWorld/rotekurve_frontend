@@ -25,10 +25,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/flowbite-datepicker/dist/css/datepicker.css"
             ],
             "scripts": [
-              "node_modules/alpinejs/dist/cdn.js"
+              "node_modules/alpinejs/dist/cdn.js",
+              "node_modules/flowbite-datepicker/dist/js/datepicker.js"
             ]
           },
           "configurations": {
@@ -89,10 +91,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/flowbite-datepicker/dist/css/datepicker.css"
             ],
             "scripts": [
-              "node_modules/alpinejs/dist/cdn.js"
+              "node_modules/alpinejs/dist/cdn.js",
+              "node_modules/flowbite-datepicker/dist/js/datepicker.js"
             ]
           }
         }
