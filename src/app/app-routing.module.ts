@@ -7,6 +7,7 @@ import { NotFoundComponent } from './shared/not-found/not-found.component';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 import { AuthGuard } from './auth.guard';
 import { LoginComponent } from './pages/admin/login/login.component';
+import { MitgliederComponent } from './pages/admin/mitglieder/mitglieder.component';
 
 /* ROUTES */
 const routes: Routes = [
@@ -24,6 +25,7 @@ const routes: Routes = [
     children: [
       { path: 'dashboard', component: DashboardComponent },
       { path: '', redirectTo: '/dashboard', pathMatch: 'full' }, // redirect '/admin' route to '/admin/dashboard'
+      { path: 'mitglieder', component: MitgliederComponent },
     ],
   },
 
