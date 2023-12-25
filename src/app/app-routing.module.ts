@@ -8,6 +8,7 @@ import { DashboardComponent } from './pages/admin/dashboard/dashboard.component'
 import { AuthGuard } from './auth.guard';
 import { LoginComponent } from './pages/admin/login/login.component';
 import { MitgliederComponent } from './pages/admin/mitglieder/mitglieder.component';
+import { FinanzenComponent } from './pages/admin/finanzen/finanzen.component';
 
 /* ROUTES */
 const routes: Routes = [
@@ -26,6 +27,7 @@ const routes: Routes = [
       { path: 'dashboard', component: DashboardComponent },
       { path: '', redirectTo: '/dashboard', pathMatch: 'full' }, // redirect '/admin' route to '/admin/dashboard'
       { path: 'mitglieder', component: MitgliederComponent },
+      { path: 'finanzen', component: FinanzenComponent },
     ],
   },
 
