@@ -3,7 +3,7 @@ name: DevDeploy
 on:
   push:
     branches:
-      - dev
+      - master
 
 jobs:
   deploy:
@@ -22,7 +22,7 @@ jobs:
         run: npm install
 
       - name: Build
-        run: npm run build -- --configuration=development
+        run: npm run build -- --configuration=production
 
       - name: Deploy
         run: |
