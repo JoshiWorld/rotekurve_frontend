@@ -5,7 +5,7 @@ import { Component, Renderer2 } from '@angular/core';
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.css']
 })
-export class TableComponent {
+export class MitgliederTableComponent {
   constructor(private renderer: Renderer2) {}
 
   ngOnInit(): void {
